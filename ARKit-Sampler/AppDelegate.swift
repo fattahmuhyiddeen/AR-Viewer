@@ -62,10 +62,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       try fileManager.unzipItem(at: url, to: extractedURL)
       print("success unzip")
       
-      let scnFilePath = extractedURL.appendingPathComponent("Oya_500k_2048x40 copy.scn").path
-      DispatchQueue.main.async {
-        //                self.loadModel(from: scnFilePath)
-      }
+//      let scnFilePath = extractedURL.appendingPathComponent("Oya_500k_2048x40 copy.scn").path
+//      DispatchQueue.main.async {
+//        //                self.loadModel(from: scnFilePath)
+//      }
     } catch {
       print("ZIP extraction error: \(error)")
     }
