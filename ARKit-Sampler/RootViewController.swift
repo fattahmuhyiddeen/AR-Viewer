@@ -28,7 +28,8 @@ class RootViewController: UITableViewController {
     // MARK: UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.samples.count
+        // TODO return dataSource.samples.count if want to display sample app
+        return 0 //dataSource.samples.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
