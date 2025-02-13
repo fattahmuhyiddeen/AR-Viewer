@@ -1,16 +1,20 @@
 PODS:
   - ColorSlider (3.0.1)
+  - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
   - ColorSlider
+  - ZIPFoundation (~> 0.9)
 
 SPEC REPOS:
   trunk:
     - ColorSlider
+    - ZIPFoundation
 
 SPEC CHECKSUMS:
   ColorSlider: fe0a511351837848076c30417522ab175ab8fea9
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: 7d7ec214ca390c571ed2c2b8da8156988ed4c239
+PODFILE CHECKSUM: e4777c87f7347ce223e26ae5f68805a9c4b13e29
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.16.2

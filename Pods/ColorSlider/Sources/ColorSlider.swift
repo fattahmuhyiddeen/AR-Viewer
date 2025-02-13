@@ -260,7 +260,11 @@ import CoreGraphics
 	}
 	
 	public override func layoutSublayers(of layer: CALayer) {
-		super.layoutSublayers(of: layer)
+        if #available(iOS 10.0, *) {
+            super.layoutSublayers(of: layer)
+        } else {
+            // Fallback on earlier versions
+        }
 		layer.sublayers?.forEach { layout($0, parent: layer) }
 	}
 
