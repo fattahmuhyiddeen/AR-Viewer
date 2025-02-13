@@ -660,7 +660,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U2MY8YW426;
+				DEVELOPMENT_TEAM = 3483568G9H;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "ARKit-Sampler/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "OFO AR Viewer";
@@ -671,7 +671,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = my.ofo.arviewer;
+				PRODUCT_BUNDLE_IDENTIFIER = my.ofo.arviewer.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -686,7 +686,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U2MY8YW426;
+				DEVELOPMENT_TEAM = 3483568G9H;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "ARKit-Sampler/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "OFO AR Viewer";
@@ -697,7 +697,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = my.ofo.arviewer;
+				PRODUCT_BUNDLE_IDENTIFIER = my.ofo.arviewer.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
