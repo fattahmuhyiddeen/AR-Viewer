@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     let url  = "ofoar://open?model=https://ahadd-cdn.azureedge.net/ahadd-container/augmented/156-75254acf-fc2f-4588-bd03-439305eda0c5.zip"
+
+    
     
     self.downloadAndExtractModel(URL.init(string: url)!);
     
@@ -102,8 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           print("File already exists [\(destinationURL.path)]")
           try! FileManager().removeItem(at: destinationURL)
           print("deleted file")
-        }
-        
+        }        
         
         print("moving")
         try fileManager.moveItem(at: tempURL, to: destinationURL)
@@ -117,6 +118,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           let directoryContents = try fileManager.contentsOfDirectory(at: extractedURL, includingPropertiesForKeys: nil, options: [])
           
           print("contentsssss",directoryContents)
+
+          // get the scn file
+          let scnFilePath = directoryContents.first(where: { $0.pathExtension == "scn" })
+          print("scnFilePath",scnFilePath)
+
+          // open the ARView
+          self.openARView(modelURL: scnFilePath!)
           
           //                    navigationController?.pushViewController(dataSource.samples[2].controller(), animated: true)
         }
@@ -132,5 +140,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     task.resume()
     
   }
+
+  func openARView(modelURL: URL) {
+    DispatchQueue.main.async {
+        let viewController = SimpleViewController()
+        viewController.modelURL = modelURL
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
+    }
+  }
+
 }
 

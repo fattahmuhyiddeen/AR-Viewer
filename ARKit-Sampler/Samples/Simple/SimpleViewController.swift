@@ -16,28 +16,31 @@ class SimpleViewController: UIViewController {
   var sceneView: ARSCNView!
   
   override func viewDidLoad() {
-    
     super.viewDidLoad()
     
-    // Create and setup sceneView
     sceneView = ARSCNView(frame: view.bounds)
     view.addSubview(sceneView)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
-    // Load scene
     if let modelURL = modelURL {
+      print("modelURL", modelURL)
+      
       sceneView.allowsCameraControl = true
-      sceneView.scene = SCNScene(named: modelURL.lastPathComponent, inDirectory: modelURL.deletingLastPathComponent().path)!
-    } else {
-      print("No model URL provided")
-      
-      let alert = UIAlertController(title: "Error", message: "No model URL provided", preferredStyle: .alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .default))
-      present(alert, animated: true)
-      
+      do {
+        let scene = try SCNScene(url: modelURL, options: nil)
+        sceneView.scene = scene
+      } catch {
+        print("Failed to load scene from:", modelURL)
+        let alert = UIAlertController(title: "Error", 
+                                    message: "Failed to load 3D model", 
+                                    preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+      }
     }
-    
-    // sceneView.scene = SCNScene(named: "ship.scn", inDirectory: "models.scnassets/ship")!
-    
   }
   
   override func viewWillAppear(_ animated: Bool) {
