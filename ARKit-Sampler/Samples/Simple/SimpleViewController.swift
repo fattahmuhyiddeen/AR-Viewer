@@ -10,21 +10,46 @@ import UIKit
 import ARKit
 
 class SimpleViewController: UIViewController {
-
-    @IBOutlet var sceneView: ARSCNView!
+  
+  var modelURL: URL?
+  
+  var sceneView: ARSCNView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()        
-        sceneView.scene = SCNScene(named: "ship.scn", inDirectory: "models.scnassets/ship")!
-    }
+    sceneView = ARSCNView(frame: view.bounds)
+    view.addSubview(sceneView)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        sceneView.session.run(ARWorldTrackingConfiguration())
+    if let modelURL = modelURL {
+      print("modelURL", modelURL)
+      
+      sceneView.allowsCameraControl = true
+      do {
+        let scene = try SCNScene(url: modelURL, options: nil)
+        sceneView.scene = scene
+      } catch {
+        print("Failed to load scene from:", modelURL)
+        let alert = UIAlertController(title: "Error", 
+                                    message: "Failed to load 3D model", 
+                                    preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+      }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        sceneView.session.pause()
-    }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    sceneView.session.run(ARWorldTrackingConfiguration())
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    sceneView.session.pause()
+  }
 }
