@@ -18,11 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    let url  = "ofoar://open?model=https://ahadd-cdn.azureedge.net/ahadd-container/augmented/156-75254acf-fc2f-4588-bd03-439305eda0c5.zip"
-
-    
-    
-    self.downloadAndExtractModel(URL.init(string: url)!);
+//    let url  = "ofoar://open?model=https://ahadd-cdn.azureedge.net/ahadd-container/augmented/156-75254acf-fc2f-4588-bd03-439305eda0c5.zip"
+//    
+//    self.downloadAndExtractModel(URL.init(string: url)!);
     
     return true
     
