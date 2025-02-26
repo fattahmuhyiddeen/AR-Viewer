@@ -62,7 +62,7 @@
                             <outlet property="delegate" destination="0yA-Gr-RBh" id="b2d-mP-Jlz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="OFO AR" id="Pwg-vp-eEZ"/>
+                    <navigationItem key="navigationItem" title="IRIS AR" id="Pwg-vp-eEZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R14-VB-FJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
