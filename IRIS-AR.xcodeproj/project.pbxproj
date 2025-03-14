@@ -82,7 +82,7 @@
 		8A5E85C324341F1E0011850E /* MobileNetV2Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2Int8LUT.mlmodel; sourceTree = "<group>"; };
 		8A783E532078D44B00B3A2D0 /* ShapedPlaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapedPlaneViewController.swift; sourceTree = "<group>"; };
 		8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapedPlane.storyboard; sourceTree = "<group>"; };
-		8A8921C61F718E040087C2B0 /* OFO AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OFO AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8921C61F718E040087C2B0 /* IRIS AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IRIS AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8921C91F718E040087C2B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8921CE1F718E040087C2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A8921D01F718E040087C2B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 		8A8921C71F718E040087C2B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A8921C61F718E040087C2B0 /* OFO AR.app */,
+				8A8921C61F718E040087C2B0 /* IRIS AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -353,9 +353,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A8921C51F718E040087C2B0 /* ARKit-Sampler */ = {
+		8A8921C51F718E040087C2B0 /* IRIS-AR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A8921D81F718E040087C2B0 /* Build configuration list for PBXNativeTarget "ARKit-Sampler" */;
+			buildConfigurationList = 8A8921D81F718E040087C2B0 /* Build configuration list for PBXNativeTarget "IRIS-AR" */;
 			buildPhases = (
 				F0102A004559E363A8723412 /* [CP] Check Pods Manifest.lock */,
 				8A8921C21F718E040087C2B0 /* Sources */,
@@ -367,9 +367,9 @@
 			);
 			dependencies = (
 			);
-			name = "ARKit-Sampler";
+			name = "IRIS-AR";
 			productName = "ARKit-Sampler";
-			productReference = 8A8921C61F718E040087C2B0 /* OFO AR.app */;
+			productReference = 8A8921C61F718E040087C2B0 /* IRIS AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -390,7 +390,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A8921C11F718E040087C2B0 /* Build configuration list for PBXProject "ARKit-Sampler" */;
+			buildConfigurationList = 8A8921C11F718E040087C2B0 /* Build configuration list for PBXProject "IRIS-AR" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -403,7 +403,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A8921C51F718E040087C2B0 /* ARKit-Sampler */,
+				8A8921C51F718E040087C2B0 /* IRIS-AR */,
 			);
 		};
 /* End PBXProject section */
@@ -707,7 +707,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A8921C11F718E040087C2B0 /* Build configuration list for PBXProject "ARKit-Sampler" */ = {
+		8A8921C11F718E040087C2B0 /* Build configuration list for PBXProject "IRIS-AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A8921D61F718E040087C2B0 /* Debug */,
@@ -716,7 +716,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A8921D81F718E040087C2B0 /* Build configuration list for PBXNativeTarget "ARKit-Sampler" */ = {
+		8A8921D81F718E040087C2B0 /* Build configuration list for PBXNativeTarget "IRIS-AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A8921D91F718E040087C2B0 /* Debug */,
