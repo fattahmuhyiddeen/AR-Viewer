@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  ARKit-Sampler
-//
-//  Created by Shuichi Tsutsumi on 2017/09/20.
-//  Copyright © 2017 Shuichi Tsutsumi. All rights reserved.
-//
-
 import UIKit
 
 import ZIPFoundation
@@ -123,8 +115,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
           // open the ARView
           self.openARView(modelURL: scnFilePath!)
-          
-          //                    navigationController?.pushViewController(dataSource.samples[2].controller(), animated: true)
         }
         catch {
           print("xxxx error listing",error.localizedDescription)
