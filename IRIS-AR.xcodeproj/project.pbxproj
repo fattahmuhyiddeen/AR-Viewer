@@ -438,7 +438,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = my.ofo.arviewer;
 				PRODUCT_NAME = "IRIS AR";
 				SWIFT_VERSION = 5.0;
@@ -464,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = my.ofo.arviewer;
 				PRODUCT_NAME = "IRIS AR";
 				SWIFT_VERSION = 5.0;
