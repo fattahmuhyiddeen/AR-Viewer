@@ -11,32 +11,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
 //    let url  = "ofoar://open?model=https://ahadd-cdn.azureedge.net/ahadd-container/augmented/156-75254acf-fc2f-4588-bd03-439305eda0c5.zip"
-//    
-//    self.downloadAndExtractModel(URL.init(string: url)!);
     
     return true
-    
-    
   }  
   
   
   
   func application(_ application: UIApplication, continue userActivity: NSUserActivity,
                    restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-    //    handleDeepLinkUrl(userActivity.webpageURL)
     downloadAndExtractModel(userActivity.webpageURL!)
     return true
   }
   
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool{
     //first launch after install
-    //    handleDeepLinkUrl(url)
     downloadAndExtractModel(url)
     return true
   }
   func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool{
     //first launch after install for older iOS version
-    //    handleDeepLinkUrl(url)
     downloadAndExtractModel(url)
     return true
   }
@@ -53,11 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       try fileManager.createDirectory(at: extractedURL, withIntermediateDirectories: true, attributes: nil)
       try fileManager.unzipItem(at: url, to: extractedURL)
       print("success unzip")
-      
-//      let scnFilePath = extractedURL.appendingPathComponent("Oya_500k_2048x40 copy.scn").path
-//      DispatchQueue.main.async {
-//        //                self.loadModel(from: scnFilePath)
-//      }
     } catch {
       print("ZIP extraction error: \(error)")
     }
@@ -66,7 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func downloadAndExtractModel(_ url: URL) {
-    
     let fileManager = FileManager.default
     let extractedURL = fileManager.temporaryDirectory.appendingPathComponent("ExtractedModel")
     
@@ -74,22 +61,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     guard let arModelURL = URLComponents(url: url, resolvingAgainstBaseURL: true)?.queryItems?.first(where: { $0.name == "model" })?.value,
           let modelURL = URL(string: arModelURL) else {
-      //        showError("Invalid deep link URL")
-      print("invalid deep link URL")
+    
+        if let r = window?.rootViewController as? UINavigationController,
+            let r1 = r.viewControllers.first as? RootViewController {
+            print("r: \(type(of: r))") // Print the class name
+            print("r1: \(type(of: r1))") // Print the class name
+            r1.showError(l:"invalid deep link URL")
+           }
       return
     }
     
     //        let modelURL = URL(string: "https://ahadd-cdn.azureedge.net/ahadd-container/augmented/156-75254acf-fc2f-4588-bd03-439305eda0c5.zip")!
     let destinationURL = fileManager.temporaryDirectory.appendingPathComponent("model.zip")
-    print("downloading")
+      
+      if let r = window?.rootViewController as? UINavigationController,
+          let r1 = r.viewControllers.first as? RootViewController {
+          r1.startLoadingState(l:arModelURL)
+         }
+      
+
     let task = URLSession.shared.downloadTask(with: modelURL) { tempURL, response, error in
       guard let tempURL = tempURL, error == nil else {
-        print("Download error: \(error!)")
+        print()
+          if let r = self.window?.rootViewController as? UINavigationController,
+              let r1 = r.viewControllers.first as? RootViewController {
+              r1.showError(l:"Download error: \(error!)")
+             }
         return
       }
       
       do {
-        print("download success")
+          if let r = self.window?.rootViewController as? UINavigationController,
+              let r1 = r.viewControllers.first as? RootViewController {
+              r1.startLoadingState(l:"download success")
+             }
         if FileManager().fileExists(atPath: destinationURL.path) {
           print("File already exists [\(destinationURL.path)]")
           try! FileManager().removeItem(at: destinationURL)
@@ -98,7 +103,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("moving")
         try fileManager.moveItem(at: tempURL, to: destinationURL)
-        print("extracting")
+
+          if let r = self.window?.rootViewController as? UINavigationController,
+              let r1 = r.viewControllers.first as? RootViewController {
+              r1.startLoadingState(l:"extracting")
+             }
+          
         self.extractZIP(at: destinationURL)
         print("extracted")
         
@@ -117,12 +127,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           self.openARView(modelURL: scnFilePath!)
         }
         catch {
-          print("xxxx error listing",error.localizedDescription)
+            if let r = self.window?.rootViewController as? UINavigationController,
+                let r1 = r.viewControllers.first as? RootViewController {
+                r1.showError(l:"error listing: "+error.localizedDescription)
+               }
         }
         
         //                self.extractZIP(at: destinationURL)
       } catch {
-        print("File move error: \(error)")
+          if let r = self.window?.rootViewController as? UINavigationController,
+              let r1 = r.viewControllers.first as? RootViewController {
+              r1.showError(l:"Error cannot move file: \(error)")
+             }
       }
     }
     task.resume()

@@ -2,12 +2,27 @@
 import UIKit
 
 class RootViewController: UITableViewController {
-
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
+    @IBOutlet weak var label: UILabel!
     private let dataSource = SampleDataSource()
+    
+    func startLoadingState(l: String){
+        DispatchQueue.main.async {
+            self.label.text = "Downloading from: "+l
+            self.loading.isHidden = false
+        }
+    }
+    
+    func showError(l: String){
+        DispatchQueue.main.async {
+            self.label.text = "Downloading from: "+l
+            self.loading.isHidden = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,8 +41,6 @@ class RootViewController: UITableViewController {
         
         return cell
     }
-    
-    // MARK: UITableViewDelegate
         
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sample = dataSource.samples[(indexPath as NSIndexPath).row]

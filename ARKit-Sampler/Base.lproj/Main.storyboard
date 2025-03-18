@@ -15,16 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" id="7ek-2i-05C">
+                        <activityIndicatorView key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" id="7ek-2i-05C">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on any deeplink to open AR model" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GRL-85-f6l">
+                            <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <connections>
                             <outlet property="dataSource" destination="0yA-Gr-RBh" id="0aE-rV-5tR"/>
                             <outlet property="delegate" destination="0yA-Gr-RBh" id="b2d-mP-Jlz"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="IRIS AR" id="Pwg-vp-eEZ"/>
+                    <connections>
+                        <outlet property="label" destination="GRL-85-f6l" id="zXx-f4-rsa"/>
+                        <outlet property="loading" destination="7ek-2i-05C" id="LQY-CD-78U"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R14-VB-FJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
