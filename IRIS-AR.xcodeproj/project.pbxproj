@@ -7,36 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F5AA0984FD0409AEB73AC4E /* Pods_ARKit_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */; };
-		8A086D941F71941C00951ABF /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D931F71941C00951ABF /* RootViewCell.swift */; };
 		8A086D971F71968C00951ABF /* Simple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A086D961F71968C00951ABF /* Simple.storyboard */; };
 		8A086D991F7196A300951ABF /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D981F7196A300951ABF /* SimpleViewController.swift */; };
-		8A086DA11F7198D900951ABF /* ARPlaneAnchor+Visualize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D9D1F7198D900951ABF /* ARPlaneAnchor+Visualize.swift */; };
-		8A086DA21F7198D900951ABF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D9E1F7198D900951ABF /* Common.swift */; };
-		8A086DA31F7198D900951ABF /* SceneKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D9F1F7198D900951ABF /* SceneKitUtils.swift */; };
-		8A086DA41F7198D900951ABF /* TrackingState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086DA01F7198D900951ABF /* TrackingState+Description.swift */; };
-		8A086DA71F719C2600951ABF /* PlaneDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086DA51F719C2600951ABF /* PlaneDetectionViewController.swift */; };
-		8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */; };
 		8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921C91F718E040087C2B0 /* AppDelegate.swift */; };
 		8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921CD1F718E040087C2B0 /* Main.storyboard */; };
 		8A8921D11F718E040087C2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921D01F718E040087C2B0 /* Assets.xcassets */; };
 		8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921D21F718E040087C2B0 /* LaunchScreen.storyboard */; };
 		8A8921DC1F7190010087C2B0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921DB1F7190010087C2B0 /* RootViewController.swift */; };
-		8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921DD1F7191370087C2B0 /* SampleDataSource.swift */; };
+		8FCCAA38E66689126795D90B /* Pods_IRIS_AR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA996A87D9CBEA69AF6D4C8 /* Pods_IRIS_AR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F13E8C5860DBEF1BD063CF8 /* Pods-ARKit-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
-		7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKit_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A086D931F71941C00951ABF /* RootViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
+		1F13E8C5860DBEF1BD063CF8 /* Pods-IRISAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRISAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRISAR/Pods-IRISAR.debug.xcconfig"; sourceTree = "<group>"; };
+		1F6A1B4F0C9933A7E2A6C7D8 /* Pods-IRIS-AR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRIS-AR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRIS-AR/Pods-IRIS-AR.debug.xcconfig"; sourceTree = "<group>"; };
 		8A086D961F71968C00951ABF /* Simple.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Simple.storyboard; sourceTree = "<group>"; };
 		8A086D981F7196A300951ABF /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
-		8A086D9D1F7198D900951ABF /* ARPlaneAnchor+Visualize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARPlaneAnchor+Visualize.swift"; sourceTree = "<group>"; };
-		8A086D9E1F7198D900951ABF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		8A086D9F1F7198D900951ABF /* SceneKitUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneKitUtils.swift; sourceTree = "<group>"; };
-		8A086DA01F7198D900951ABF /* TrackingState+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TrackingState+Description.swift"; sourceTree = "<group>"; };
-		8A086DA51F719C2600951ABF /* PlaneDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneDetectionViewController.swift; sourceTree = "<group>"; };
-		8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaneDetection.storyboard; sourceTree = "<group>"; };
 		8A8921C61F718E040087C2B0 /* IRIS AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IRIS AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8921C91F718E040087C2B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8921CE1F718E040087C2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,8 +29,9 @@
 		8A8921D31F718E040087C2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A8921D51F718E040087C2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8921DB1F7190010087C2B0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		8A8921DD1F7191370087C2B0 /* SampleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
-		8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit-Sampler.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler.release.xcconfig"; sourceTree = "<group>"; };
+		8FBAFB21E706B4A02B0EA992 /* Pods-IRISAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRISAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRISAR/Pods-IRISAR.release.xcconfig"; sourceTree = "<group>"; };
+		DDA996A87D9CBEA69AF6D4C8 /* Pods_IRIS_AR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRIS_AR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E203C9C4D1DFCD2CA4D10D93 /* Pods-IRIS-AR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRIS-AR.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRIS-AR/Pods-IRIS-AR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F5AA0984FD0409AEB73AC4E /* Pods_ARKit_Sampler.framework in Frameworks */,
+				8FCCAA38E66689126795D90B /* Pods_IRIS_AR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +49,7 @@
 		297F2017A339FCD6D3645863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */,
+				DDA996A87D9CBEA69AF6D4C8 /* Pods_IRIS_AR.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -71,8 +57,10 @@
 		38046705730D58ABBFA12F52 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1F13E8C5860DBEF1BD063CF8 /* Pods-ARKit-Sampler.debug.xcconfig */,
-				8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */,
+				1F13E8C5860DBEF1BD063CF8 /* Pods-IRISAR.debug.xcconfig */,
+				8FBAFB21E706B4A02B0EA992 /* Pods-IRISAR.release.xcconfig */,
+				1F6A1B4F0C9933A7E2A6C7D8 /* Pods-IRIS-AR.debug.xcconfig */,
+				E203C9C4D1DFCD2CA4D10D93 /* Pods-IRIS-AR.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -81,27 +69,14 @@
 			isa = PBXGroup;
 			children = (
 				8A9C49B71F71AC6600C8CB69 /* Simple */,
-				8A9C49B81F71AC7F00C8CB69 /* PlaneDetection */,
 			);
 			path = Samples;
-			sourceTree = "<group>";
-		};
-		8A086D9C1F7198D900951ABF /* common */ = {
-			isa = PBXGroup;
-			children = (
-				8A086D9E1F7198D900951ABF /* Common.swift */,
-				8A086D9D1F7198D900951ABF /* ARPlaneAnchor+Visualize.swift */,
-				8A086D9F1F7198D900951ABF /* SceneKitUtils.swift */,
-				8A086DA01F7198D900951ABF /* TrackingState+Description.swift */,
-			);
-			path = common;
 			sourceTree = "<group>";
 		};
 		8A8921BD1F718E040087C2B0 = {
 			isa = PBXGroup;
 			children = (
-				8A086D9C1F7198D900951ABF /* common */,
-				8A8921C81F718E040087C2B0 /* ARKit-Sampler */,
+				8A8921C81F718E040087C2B0 /* IRISAR */,
 				8A8921C71F718E040087C2B0 /* Products */,
 				38046705730D58ABBFA12F52 /* Pods */,
 				297F2017A339FCD6D3645863 /* Frameworks */,
@@ -116,7 +91,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A8921C81F718E040087C2B0 /* ARKit-Sampler */ = {
+		8A8921C81F718E040087C2B0 /* IRISAR */ = {
 			isa = PBXGroup;
 			children = (
 				8A8921D01F718E040087C2B0 /* Assets.xcassets */,
@@ -125,11 +100,9 @@
 				8A8921CD1F718E040087C2B0 /* Main.storyboard */,
 				8A8921C91F718E040087C2B0 /* AppDelegate.swift */,
 				8A8921DB1F7190010087C2B0 /* RootViewController.swift */,
-				8A086D931F71941C00951ABF /* RootViewCell.swift */,
-				8A8921DD1F7191370087C2B0 /* SampleDataSource.swift */,
 				8A086D951F71967800951ABF /* Samples */,
 			);
-			path = "ARKit-Sampler";
+			path = IRISAR;
 			sourceTree = "<group>";
 		};
 		8A9C49B71F71AC6600C8CB69 /* Simple */ = {
@@ -139,15 +112,6 @@
 				8A086D961F71968C00951ABF /* Simple.storyboard */,
 			);
 			path = Simple;
-			sourceTree = "<group>";
-		};
-		8A9C49B81F71AC7F00C8CB69 /* PlaneDetection */ = {
-			isa = PBXGroup;
-			children = (
-				8A086DA51F719C2600951ABF /* PlaneDetectionViewController.swift */,
-				8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */,
-			);
-			path = PlaneDetection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +132,7 @@
 			dependencies = (
 			);
 			name = "IRIS-AR";
-			productName = "ARKit-Sampler";
+			productName = IRISAR;
 			productReference = 8A8921C61F718E040087C2B0 /* IRIS AR.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -216,7 +180,6 @@
 				8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */,
 				8A8921D11F718E040087C2B0 /* Assets.xcassets in Resources */,
 				8A086D971F71968C00951ABF /* Simple.storyboard in Resources */,
-				8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */,
 				8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,7 +193,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-IRIS-AR/Pods-IRIS-AR-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ColorSlider/ColorSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework",
 			);
@@ -241,7 +204,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IRIS-AR/Pods-IRIS-AR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0102A004559E363A8723412 /* [CP] Check Pods Manifest.lock */ = {
@@ -255,7 +218,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ARKit-Sampler-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-IRIS-AR-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,16 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A086DA31F7198D900951ABF /* SceneKitUtils.swift in Sources */,
 				8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */,
-				8A086DA11F7198D900951ABF /* ARPlaneAnchor+Visualize.swift in Sources */,
 				8A086D991F7196A300951ABF /* SimpleViewController.swift in Sources */,
-				8A086DA71F719C2600951ABF /* PlaneDetectionViewController.swift in Sources */,
-				8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */,
-				8A086DA21F7198D900951ABF /* Common.swift in Sources */,
 				8A8921DC1F7190010087C2B0 /* RootViewController.swift in Sources */,
-				8A086D941F71941C00951ABF /* RootViewCell.swift in Sources */,
-				8A086DA41F7198D900951ABF /* TrackingState+Description.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,15 +378,15 @@
 		};
 		8A8921D91F718E040087C2B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F13E8C5860DBEF1BD063CF8 /* Pods-ARKit-Sampler.debug.xcconfig */;
+			baseConfigurationReference = 1F6A1B4F0C9933A7E2A6C7D8 /* Pods-IRIS-AR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2MY8YW426;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "ARKit-Sampler/Info.plist";
+				INFOPLIST_FILE = IRISAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "IRIS AR";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -448,15 +404,15 @@
 		};
 		8A8921DA1F718E040087C2B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */;
+			baseConfigurationReference = E203C9C4D1DFCD2CA4D10D93 /* Pods-IRIS-AR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2MY8YW426;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "ARKit-Sampler/Info.plist";
+				INFOPLIST_FILE = IRISAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "IRIS AR";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

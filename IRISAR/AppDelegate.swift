@@ -57,8 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let fileManager = FileManager.default
     let extractedURL = fileManager.temporaryDirectory.appendingPathComponent("ExtractedModel")
     
-    let dataSource = SampleDataSource()
-    
     guard let arModelURL = URLComponents(url: url, resolvingAgainstBaseURL: true)?.queryItems?.first(where: { $0.name == "model" })?.value,
           let modelURL = URL(string: arModelURL) else {
     
