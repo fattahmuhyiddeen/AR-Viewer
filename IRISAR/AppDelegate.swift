@@ -143,15 +143,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
 
-  func openARView(modelURL: URL) {
-    DispatchQueue.main.async {
-        let viewController = SimpleViewController()
-        viewController.modelURL = modelURL
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = viewController
-        self.window?.makeKeyAndVisible()
+
+
+
+  func pushToNewViewController(modelURL: URL) {
+    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+       let window = windowScene.windows.first,
+       let navController = window.rootViewController as? UINavigationController {
+
+        let newVC = SimpleViewController()
+        newVC.modelURL = modelURL
+        navController.pushViewController(newVC, animated: true)
     }
+}
+
+
+  func openARView(modelURL: URL) {
+//    DispatchQueue.main.async {
+//        let viewController = SimpleViewController()
+//        viewController.modelURL = modelURL
+//        
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = viewController
+//        self.window?.makeKeyAndVisible()
+//    }
+      
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+          (UIApplication.shared.delegate as? AppDelegate)?.pushToNewViewController(modelURL: modelURL)
+      }
+      
+      
+      if let r = self.window?.rootViewController as? UINavigationController,
+          let r1 = r.viewControllers.first as? RootViewController {
+          r1.setInitialState()
+         }
+      
+     
   }
 
 }
