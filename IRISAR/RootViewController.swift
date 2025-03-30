@@ -42,37 +42,23 @@ class RootViewController: UITableViewController {
         closeButton.setTitle("", for: UIControl.State.normal)
         closeButton.setImage(UIImage(systemName: "xmark"), for: UIControl.State.normal)
         closeButton.tintColor = UIColor.black
-        closeButton.frame = CGRect(x: 20, y: 50, width: 30, height: 30)
-//        closeButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        closeButton.frame = CGRect(x: UIScreen.main.bounds.width-40, y: 0, width: 30, height: 30)
         
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: UIControl.Event.touchUpInside)
         closeButton.layer.cornerRadius = 15
         closeButton.backgroundColor = UIColor(white: 0.9, alpha: 0.8) // Light gray bg
         closeButton.isHidden = true
         view.addSubview(closeButton)
-        
-        NSLayoutConstraint.activate([
-            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            closeButton.widthAnchor.constraint(equalToConstant: 30),
-            closeButton.heightAnchor.constraint(equalToConstant: 30)
-        ])
-
-
-
     }
     
-            @objc func closeButtonTapped() {
+    @objc func closeButtonTapped() {
                 isCancelled=true
-                // Close action
-//                dismiss(animated: true, completion: nil)
                 setInitialState()
                 if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                    appDelegate.task?.cancel()// ✅ Call successful
+                    appDelegate.task?.cancel()
                        }
                 
-            }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
