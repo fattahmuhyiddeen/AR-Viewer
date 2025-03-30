@@ -7,6 +7,7 @@ import ZIPFoundation
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
+  var task: URLSessionDownloadTask? = nil
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -78,9 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          }
       
 
-    let task = URLSession.shared.downloadTask(with: modelURL) { tempURL, response, error in
+    task = URLSession.shared.downloadTask(with: modelURL) { tempURL, response, error in
       guard let tempURL = tempURL, error == nil else {
-        print()
           if let r = self.window?.rootViewController as? UINavigationController,
               let r1 = r.viewControllers.first as? RootViewController {
               r1.showError(l:"Download error: \(error!)")
@@ -139,7 +139,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              }
       }
     }
-    task.resume()
+      task?.resume()
     
   }
 
